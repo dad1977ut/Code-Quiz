@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div id="question-container">
+      <h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        doloremque sit sed nulla soluta maiores voluptas quisquam cupiditate
+        eligendi tenetur? In laboriosam aliquid eveniet possimus cum aut
+        voluptatum natus doloremque.
+      </h2>
+      <button>answer1</button>
+      <button>answer2</button>
+      <button>answer3</button>
+      <button>answer4</button>
+    </div>
+    <script>
+      document.querySelector("h2").addEventListener("click", function () {
+        document.querySelector("#question-container h2").innerHTML =
+          "question 1";
+      });
+    </script>
+  </body>
+</html>
