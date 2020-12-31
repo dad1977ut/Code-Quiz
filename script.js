@@ -22,6 +22,12 @@ function checkAnswer(current, answerClicked) {
     return 0;
   }
 }
+function toggleButton() {
+  document.querySelector("#answer1").style.display = "none";
+  document.querySelector("#answer2").style.display = "none";
+  document.querySelector("#answer3").style.display = "none";
+  document.querySelector("#answer4").style.display = "none";
+}
 function answerClickHandler(buttonNum) {
   totalCorrect += checkAnswer(questions[currentQuestion], buttonNum);
   currentQuestion++;
@@ -33,10 +39,7 @@ function answerClickHandler(buttonNum) {
     document.querySelector("#question-container h2").textContent = "game over";
     document.querySelector("#question-container h3").textContent =
       "Total: " + totalCorrect;
-    document.querySelector("#answer1").style.display = "none";
-    document.querySelector("#answer2").style.display = "none";
-    document.querySelector("#answer3").style.display = "none";
-    document.querySelector("#answer4").style.display = "none";
+    toggleButton();
   }
 }
 //shows the first question
