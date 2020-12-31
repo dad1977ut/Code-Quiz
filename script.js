@@ -43,16 +43,18 @@ function answerClickHandler(buttonNum) {
   }
 }
 //shows the first question
-showQuestion(questions[currentQuestion]);
-document
-  .querySelector("#answer1")
-  .addEventListener("click", answerClickHandler.bind(this, 1));
-document.querySelector("#answer2").addEventListener("click", function () {
-  answerClickHandler(2);
-});
-document
-  .querySelector("#answer3")
-  .addEventListener("click", answerClickHandler.bind(this, 3));
-document.querySelector("#answer4").addEventListener("click", function () {
-  answerClickHandler(4);
+document.querySelector("#start").addEventListener("click", function () {
+  showQuestion(questions[currentQuestion]);
+  document
+    .querySelector("#answer1")
+    .addEventListener("click", answerClickHandler.bind(this, 1));
+  document.querySelector("#answer2").addEventListener("click", function () {
+    answerClickHandler(2);
+  });
+  document
+    .querySelector("#answer3")
+    .addEventListener("click", answerClickHandler.bind(this, 3));
+  document.querySelector("#answer4").addEventListener("click", function () {
+    answerClickHandler(4);
+  });
 });
