@@ -42,10 +42,10 @@ function answerClickHandler(buttonNum) {
 //shows the first question
 document.querySelector("#start").addEventListener("click", function () {
   document.querySelector("#start").style.display = "none";
-  document.querySelector("#answer1").style.display = "inline";
-  document.querySelector("#answer2").style.display = "inline";
-  document.querySelector("#answer3").style.display = "inline";
-  document.querySelector("#answer4").style.display = "inline";
+  document.querySelector("#answer1").style.display = "block";
+  document.querySelector("#answer2").style.display = "block";
+  document.querySelector("#answer3").style.display = "block";
+  document.querySelector("#answer4").style.display = "block";
   showQuestion(questions[currentQuestion]);
   document
     .querySelector("#answer1")
