@@ -37,6 +37,7 @@ function answerClickHandler(buttonNum) {
     document.querySelector("#answer2").style.display = "none";
     document.querySelector("#answer3").style.display = "none";
     document.querySelector("#answer4").style.display = "none";
+    document.querySelector("form").style.display = "inline";
   }
 }
 //shows the first question
