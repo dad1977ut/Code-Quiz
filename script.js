@@ -22,12 +22,6 @@ function checkAnswer(current, answerClicked) {
     return 0;
   }
 }
-function toggleButton() {
-  document.querySelector("#answer1").style.display = "none";
-  document.querySelector("#answer2").style.display = "none";
-  document.querySelector("#answer3").style.display = "none";
-  document.querySelector("#answer4").style.display = "none";
-}
 function answerClickHandler(buttonNum) {
   totalCorrect += checkAnswer(questions[currentQuestion], buttonNum);
   currentQuestion++;
@@ -39,11 +33,19 @@ function answerClickHandler(buttonNum) {
     document.querySelector("#question-container h2").textContent = "game over";
     document.querySelector("#question-container h3").textContent =
       "Total: " + totalCorrect;
-    toggleButton();
+    document.querySelector("#answer1").style.display = "none";
+    document.querySelector("#answer2").style.display = "none";
+    document.querySelector("#answer3").style.display = "none";
+    document.querySelector("#answer4").style.display = "none";
   }
 }
 //shows the first question
 document.querySelector("#start").addEventListener("click", function () {
+  document.querySelector("#start").style.display = "none";
+  document.querySelector("#answer1").style.display = "inline";
+  document.querySelector("#answer2").style.display = "inline";
+  document.querySelector("#answer3").style.display = "inline";
+  document.querySelector("#answer4").style.display = "inline";
   showQuestion(questions[currentQuestion]);
   document
     .querySelector("#answer1")
