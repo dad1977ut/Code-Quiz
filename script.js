@@ -40,9 +40,16 @@ function answerClickHandler(buttonNum) {
     document.querySelector("form").style.display = "inline";
   }
 }
+function startPage() {
+  document.querySelector("#question-container h2").textContent = "Code Quiz";
+  document.querySelector("#question-container P").textContent =
+    "Answer the questions to this time quiz by picking the correct answer. Everytime you pick the wrong answer 10 seconds will be subtracted from your time.";
+}
+startPage();
 //shows the first question
 document.querySelector("#start").addEventListener("click", function () {
   document.querySelector("#start").style.display = "none";
+  document.querySelector("#question-container P").style.display = "none";
   document.querySelector("#answer1").style.display = "block";
   document.querySelector("#answer2").style.display = "block";
   document.querySelector("#answer3").style.display = "block";
