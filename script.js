@@ -6,6 +6,31 @@ var questions = [
 ];
 var totalCorrect = 0;
 var currentQuestion = 0;
+var secondsLeft = 10;
+function gameEnd() {
+  secondsLeft = 0;
+  document.querySelector("#timer").textContent = "";
+  console.log("totalCorrect", totalCorrect);
+  document.querySelector("#question-container h2").textContent = "game over";
+  document.querySelector("#question-container h3").textContent =
+    "Total: " + totalCorrect;
+  document.querySelector("#answer1").style.display = "none";
+  document.querySelector("#answer2").style.display = "none";
+  document.querySelector("#answer3").style.display = "none";
+  document.querySelector("#answer4").style.display = "none";
+  document.querySelector("form").style.display = "inline";
+}
+//timer
+function gameTimer() {
+  var timerInterval = setInterval(function () {
+    secondsLeft--;
+    document.querySelector("#timer").textContent = "Timer: " + secondsLeft;
+    if (secondsLeft < 0) {
+      clearInterval(timerInterval);
+      gameEnd();
+    }
+  }, 1000);
+}
 //shows the current questions and possible answers
 function showQuestion(current) {
   document.querySelector("#question-container h2").textContent = current[0];
@@ -29,15 +54,7 @@ function answerClickHandler(buttonNum) {
   if (currentQuestion < questions.length) {
     showQuestion(questions[currentQuestion]);
   } else {
-    console.log("totalCorrect", totalCorrect);
-    document.querySelector("#question-container h2").textContent = "game over";
-    document.querySelector("#question-container h3").textContent =
-      "Total: " + totalCorrect;
-    document.querySelector("#answer1").style.display = "none";
-    document.querySelector("#answer2").style.display = "none";
-    document.querySelector("#answer3").style.display = "none";
-    document.querySelector("#answer4").style.display = "none";
-    document.querySelector("form").style.display = "inline";
+    gameEnd();
   }
 }
 function startPage() {
@@ -48,6 +65,7 @@ function startPage() {
 startPage();
 //shows the first question
 document.querySelector("#start").addEventListener("click", function () {
+  gameTimer();
   document.querySelector("#start").style.display = "none";
   document.querySelector("#question-container P").style.display = "none";
   document.querySelector("#answer1").style.display = "block";
