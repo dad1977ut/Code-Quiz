@@ -6,9 +6,8 @@ var questions = [
 ];
 var totalCorrect = 0;
 var currentQuestion = 0;
-var secondsLeft = 10;
+var secondsLeft = 100;
 function gameEnd() {
-  secondsLeft = 0;
   document.querySelector("#timer").textContent = "";
   console.log("totalCorrect", totalCorrect);
   document.querySelector("#question-container h2").textContent = "game over";
@@ -49,12 +48,13 @@ function checkAnswer(current, answerClicked) {
 }
 function answerClickHandler(buttonNum) {
   totalCorrect += checkAnswer(questions[currentQuestion], buttonNum);
+  secondsLeft += (checkAnswer(questions[currentQuestion], buttonNum) - 1) * 10;
   currentQuestion++;
   console.log("currentQuestion", currentQuestion);
   if (currentQuestion < questions.length) {
     showQuestion(questions[currentQuestion]);
   } else {
-    gameEnd();
+    secondsLeft = 0;
   }
 }
 function startPage() {
