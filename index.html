@@ -8,17 +8,17 @@
   <body>
     <p id="timer"></p>
     <div id="question-container">
-      <h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        doloremque sit sed nulla soluta maiores voluptas quisquam cupiditate
-        eligendi tenetur? In laboriosam aliquid eveniet possimus cum aut
-        voluptatum natus doloremque.
-      </h2>
+      <h2>Code Quiz</h2>
       <h3></h3>
-      <p></p>
-      <form method="post" style="display: none">
-        Enter initial:
-        <input type="text" />
+      <p>
+        Answer the questions to this time quiz by picking the correct answer.
+        Everytime you pick the wrong answer 10 seconds will be subtracted from
+        your time.;
+      </p>
+      <form method="post" id="store-score" style="display: none">
+        <label for="initial">Enter initials:</label>
+        <input type="text" id="initial" name="initial" />
+        <button id="submit-score">Submit</button>
       </form>
       <button id="start">start</button>
       <button id="answer1" style="display: none">answer1</button>

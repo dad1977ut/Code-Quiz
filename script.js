@@ -7,6 +7,7 @@ var questions = [
 var totalCorrect = 0;
 var currentQuestion = 0;
 var secondsLeft = 100;
+var scoreArr = [];
 function gameEnd() {
   document.querySelector("#timer").textContent = "";
   console.log("totalCorrect", totalCorrect);
@@ -62,8 +63,8 @@ function startPage() {
   document.querySelector("#question-container P").textContent =
     "Answer the questions to this time quiz by picking the correct answer. Everytime you pick the wrong answer 10 seconds will be subtracted from your time.";
 }
-startPage();
-//shows the first question
+
+// shows the first question
 document.querySelector("#start").addEventListener("click", function () {
   gameTimer();
   document.querySelector("#start").style.display = "none";
@@ -86,3 +87,14 @@ document.querySelector("#start").addEventListener("click", function () {
     answerClickHandler(4);
   });
 });
+//add curent score to scoreArr
+document
+  .querySelector("#submit-score")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    currentQuestion = 0;
+    scoreArr.push([document.querySelector("#initial").value, totalCorrect]);
+    console.log(scoreArr);
+    localStorage.setItem("scoreArr", JSON.stringify(scoreArr));
+  });
+//store in local storage
