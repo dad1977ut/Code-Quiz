@@ -96,5 +96,6 @@ document
     scoreArr.push([document.querySelector("#initial").value, totalCorrect]);
     console.log(scoreArr);
     localStorage.setItem("scoreArr", JSON.stringify(scoreArr));
+    window.location.assign("highscore.html");
   });
 //store in local storage
