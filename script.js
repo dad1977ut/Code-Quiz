@@ -7,7 +7,7 @@ var questions = [
 var totalCorrect = 0;
 var currentQuestion = 0;
 var secondsLeft = 100;
-var scoreArr = [];
+var scoreArr = JSON.parse(localStorage.getItem("scoreArr"));
 function gameEnd() {
   document.querySelector("#timer").textContent = "";
   console.log("totalCorrect", totalCorrect);
