@@ -1,4 +1,8 @@
-var highScore = JSON.parse(localStorage.getItem("scoreArr"));
+if (localStorage.getItem("scoreArr") == null) {
+  highScore = [];
+} else {
+  var highScore = JSON.parse(localStorage.getItem("scoreArr"));
+}
 var displayScore = document.querySelector("#high-score");
 var returnButton = document.querySelector("#return");
 var resetButton = document.querySelector("#reset");
@@ -11,4 +15,8 @@ for (let i = 0; i < highScore.length; i++) {
 }
 returnButton.addEventListener("click", function () {
   window.location.assign("index.html");
+});
+resetButton.addEventListener("click", function () {
+  localStorage.removeItem("scoreArr");
+  window.location.assign("highscore.html");
 });
