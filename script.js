@@ -1,8 +1,19 @@
 //set of questions
 var questions = [
-  ["q1", "a1", "a2", "a3", "a4", "a2"],
-  ["q2", "b1", "b2", "b3", "b4", "b1"],
-  ["q3", "c1", "c2", "c3", "c4", "c4"],
+  ["What do <p> stand for", "paragraph", "pop", "period", "piece", "paragraph"],
+  ["How do create an ordered list", "<ul>", "<ol>", "<li>", "<list>", "<ol>"],
+  [
+    "What is the alt attribute in img tag",
+    "It shows a different image",
+    "It creates a slideshow",
+    "It changes the shape of the image",
+    "It’s an alternate text for the image",
+    "It’s an alternate text for the image",
+  ],
+  ["What the class selector", "*", "#", "/", ".", "."],
+  ["What the id selector", "#", "*", "/", ".", "#"],
+
+  ["What do you use to make a string", "..", "//", "+", '""', '""'],
 ];
 var totalCorrect = 0;
 var currentQuestion = 0;
