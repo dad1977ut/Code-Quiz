@@ -9,6 +9,8 @@ I want to make an application that generate a quiz.
 - Have a submit button that save initials and score
 - Have a button that erase the local memory
 - Have a button that restarts the quiz
-  ![start](assests/start.jpg)
-  ![quiz](assests/quiz.jpg)
-  ![score](assests/score.jpg)
+
+Project website: https://dad1977ut.github.io/Code-Quiz/
+![start](assests/start.jpg)
+![quiz](assests/quiz.jpg)
+![score](assests/score.jpg)

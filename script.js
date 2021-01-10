@@ -12,8 +12,32 @@ var questions = [
   ],
   ["What the class selector", "*", "#", "/", ".", "."],
   ["What the id selector", "#", "*", "/", ".", "#"],
-
+  [
+    "body {font-size: 14px; background-color: black; color : red;} What color is the background",
+    "red",
+    "white",
+    "blue",
+    "black",
+    "black",
+  ],
+  [
+    "body {font-size: 14px; background-color: black; color : red;} What color is the text",
+    "red",
+    "white",
+    "blue",
+    "black",
+    "red",
+  ],
   ["What do you use to make a string", "..", "//", "+", '""', '""'],
+  [
+    "What is the conditional statement for this for loop for (let index = 0; index < array.length; index++)",
+    "for",
+    "index = 0",
+    "index < array.length",
+    "index++",
+    "index < array.length",
+  ],
+  ["begin() What is begin", "string", "function", "number", "variable"],
 ];
 var totalCorrect = 0;
 var currentQuestion = 0;
